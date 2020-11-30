@@ -8,6 +8,7 @@ import {
 } from "./style";
 
 import TopBanner from "./c-pages/top-banner";
+import MYHotRecommend from './c-pages/hot-recommend'
 
 export default memo(function MYRecommend() {
   return (
@@ -16,10 +17,10 @@ export default memo(function MYRecommend() {
         <TopBanner />
         <Content className="wrap-v2">
           <RecommendLeft>
-
+          <MYHotRecommend/>
           </RecommendLeft>
           <RecommendRight>
-            
+
           </RecommendRight>
         </Content>
       </RecommendWrapper>
