@@ -4,7 +4,7 @@ import {getSizeImage,getCount} from '@/utils/format-utils'
 
 import {ThemeCoverWrapper} from './style'
 export default memo(function MYThemeCover(props){
-  const { info,right } = this.props
+  const { info,right } = props
   return (
     <ThemeCoverWrapper right={right}>
       <div className="cover-top">

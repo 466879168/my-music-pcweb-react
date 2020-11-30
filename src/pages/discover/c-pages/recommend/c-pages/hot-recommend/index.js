@@ -1,6 +1,7 @@
 import React,{useEffect,memo,useCallback} from 'react'
 
 import {useDispatch,useSelector,shallowEqual} from 'react-redux'
+import {useHistory} from 'react-router-dom'
 
 import {getRecommend} from '../../store/actionCreators'
 
@@ -37,7 +38,6 @@ export default memo(function(MYHotRecommend){
               )
             })
           }
-
         </div>
       </RecommendWrapper>
   )

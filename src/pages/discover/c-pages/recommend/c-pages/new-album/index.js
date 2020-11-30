@@ -7,24 +7,24 @@ import {
 import {Carousel} from 'antd'
 
 import MYThemeHeaderRCM from '@/components/theme-header-rcm';
-import MYAlbumCover from "@/components/album-cover";
+// import MYAlbumCover from "@/components/album-cover";
 import {
   AlbumWrapper
 } from "./style";
 
 export default memo(function index() {
-  const state = useSelector(state => ({
-    newAlbum:state.getIn(["recommend", "newAlbum"])
-  }),shallowEqual)
-  const dispatch = useDispatch()
-  const carouselRef = useRef()
-  useEffect(()=>{
-    dispatch(getAlbums())
-  },[dispatch])
+  // const state = useSelector(state => ({
+  //   newAlbum:state.getIn(["recommend", "newAlbum"])
+  // }),shallowEqual)
+  // const dispatch = useDispatch()
+  // const carouselRef = useRef()
+  // useEffect(()=>{
+  //   dispatch(getAlbums())
+  // },[dispatch])
 
   return (
     <AlbumWrapper>
-      <MYThemeHeaderRCM TITLE="新碟上架" moreLink="/discover/album" />
+      <MYThemeHeaderRCM title="新碟上架" moreLink="/discover/album" />
     </AlbumWrapper>
   )
 })
