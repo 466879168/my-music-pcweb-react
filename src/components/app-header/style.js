@@ -1,4 +1,4 @@
-import styled from 'styled-components' 
+import styled from 'styled-components'
 
 export const HeaderWrapper=styled.div`
   height:75px;
@@ -47,7 +47,7 @@ export const HeaderLeft=styled.div`
           right: -15px;
         }
       }
-      &*:hover a, .active{
+      &:hover a, .active{
         color:#fff;
         background:#000;
         text-decoration:none;
