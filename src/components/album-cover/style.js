@@ -23,5 +23,10 @@ export const AlbumWrapper=styled.div`
   }
   .albun-info{
     font-size:12px;
+    width:${props=>props.size};
+    .name{
+      color:#000;
+      white-space:nowrap;
+    }
   }
 `
