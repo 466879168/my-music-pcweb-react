@@ -5,6 +5,7 @@ import {getSizeImage} from '@/utils/format-utils/'
 // import {getSongDatailAction} from '@/pages/player/store'
 
 export default memo(function MYTopRanking(props) {
+  console.log(params)
   const {info} =props
   const {tracks=[]}=info
 
@@ -41,7 +42,7 @@ export default memo(function MYTopRanking(props) {
                       {item.name}
                     </span>
                     <div className="operate">
-                      {/*<button className="btn sprite_02 play" onClick={e=>playMusic()item}></button>*/}
+                      {/* <button className="btn sprite_02 play" onClick={e=>playMusic()item}></button> */}
                       <button className="btn sprite_icon2 addto"></button>
                       <button className="btn sprite_02 favor"></button>
                     </div>
