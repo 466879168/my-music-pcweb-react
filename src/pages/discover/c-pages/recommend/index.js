@@ -10,7 +10,7 @@ import {
 import TopBanner from "./c-pages/top-banner";
 import MYHotRecommend from './c-pages/hot-recommend'
 import MYNewAlbum from './c-pages/new-album'
-import MYRankingList from './c-pages/ranking-llist'
+import MYRankingList from './c-pages/ranking-list'
 
 export default memo(function MYRecommend() {
   return (

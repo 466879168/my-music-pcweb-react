@@ -24,7 +24,6 @@ export default memo(function MYTopBanner() {
       setCurrentIndex(from)
     }, 0);
   },[])
-  console.log(state)
   const bgImage=state.banners[currentIndex] && (state.banners[currentIndex].imageUrl+"?imageView&blur=40x20")
 
   return (

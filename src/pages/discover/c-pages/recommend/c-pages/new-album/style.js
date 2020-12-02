@@ -28,7 +28,7 @@ export const AlbumWrapper=styled.div`
         overflow:hidden;
       }
       .page{
-        display:flex;
+        display:flex!important;
         justify-content:space-between;
         align-items:center;
       }

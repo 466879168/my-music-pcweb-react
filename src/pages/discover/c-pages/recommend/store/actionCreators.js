@@ -22,7 +22,7 @@ const changeRecommendAction=(res)=>({
 
 const changeNewAlbumAction=(res)=>({
   type:actionTypes.CHANGE_NEW_ALBUM,
-  newAlbums:res.result
+  newAlbums:res.albums
 })
 
 const changeUpListAction=(res)=>({
@@ -64,7 +64,7 @@ export const getRecommend=()=>{
 
 export const getAlbums=()=>{
   return dispatch=>{
-    getNewAlbum().then(res=>{
+    getNewAlbum(10,0).then(res=>{
       dispatch(changeNewAlbumAction(res))
     })
   }
@@ -86,7 +86,6 @@ export const getTopData=(idx)=>{
           dispatch(changeUpListAction(res))
           break;
         default:
-          console.log('其他数据处理')
       }
     })
   }

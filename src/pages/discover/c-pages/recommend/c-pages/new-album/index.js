@@ -12,7 +12,7 @@ import {
   AlbumWrapper
 } from "./style";
 
-export default memo(function index() {
+export default memo(function MYNewAlbum() {
   const state = useSelector(state => ({
     newAlbum:state.getIn(["recommend", "newAlbum"])
   }),shallowEqual)
@@ -23,24 +23,24 @@ export default memo(function index() {
   useEffect(()=>{
     dispatch(getAlbums())
   },[dispatch])
-
+  console.log(state.newAlbum)
   return (
     <AlbumWrapper>
       <MYThemeHeaderRCM title="新碟上架" moreLink="/discover/album" />
       <div className="content">
-        <div className="arrow arrow-left sprite_02" onClick={e=>carouselRef.current.prev()}></div>
+        <div className="arrow arrow-left sprite_02" onClick={e => carouselRef.current.prev()}/>
         <div className="album">
         <Carousel ref={carouselRef} dots={false}>
           {
             [0,1].map((item,index) => {
               return (
-                <div className="page" key={item}>
+                <div key={item} className="page">
                   {
-                    state.newAlbum.slice(item*5,(item+1)*5).map(item=>{
+                    state.newAlbum&&state.newAlbum.slice(item*5,(item+1)*5).map(iten=>{
                       return (
-                        <MYAlbumCover key={item.id} info={item}/>
+                        <MYAlbumCover key={iten.id} info={iten} />
                       )
-                    }
+                    })
                   }
                 </div>
               )
@@ -48,7 +48,7 @@ export default memo(function index() {
           }
         </Carousel>
         </div>
-        <div className="arrow arrow-right sprite_02" onClick={e=>carouselRef.current.next()}></div>
+        <div className="arrow arrow-right sprite_02" onClick={e=>carouselRef.current.next()} />
       </div>
     </AlbumWrapper>
   )

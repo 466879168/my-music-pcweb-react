@@ -18,7 +18,7 @@ export default (state = defaultState, action) => {
     case actionTypes.CHANGE_HOT_RECOMMEND:
       return state.set("hotRecommends", action.recommends);
     case actionTypes.CHANGE_NEW_ALBUM:
-      return state.set("newAlbum", action.newAlbum);
+      return state.set("newAlbum", action.newAlbums);
     case actionTypes.CHANGE_UP_LIST:
       return state.set("topUpList", action.topUpList);
     case actionTypes.CHANGE_NEW_LIST:

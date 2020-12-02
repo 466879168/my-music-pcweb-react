@@ -28,7 +28,7 @@ const MYThemeHeaderRCM=memo(function(props){
         </div>
       </div>
       <div className="right">
-        <Link>更多</Link>
+        <Link to={moreLink}>更多</Link>
         <i className="icon sprite_02"></i>
       </div>
     </HeaderWrapper>

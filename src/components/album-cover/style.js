@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const AlbumWrapper=styled.div`
-  .album0image{
+  .album-image{
     position:relative;
     width:${props=>props.width};
     height:${props=>props.size};
@@ -21,12 +21,17 @@ export const AlbumWrapper=styled.div`
       text-indent:-9999px;
     }
   }
-  .albun-info{
+  .album-info{
     font-size:12px;
     width:${props=>props.size};
     .name{
       color:#000;
       white-space:nowrap;
+      text-overflow:ellipsis;
+      overflow:hidden;
+    }
+    .artist{
+      color:#666;
     }
   }
 `
